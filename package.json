@@ -1,5 +1,5 @@
 {
-  "name": "react-flash",
+  "name": "@rmiles19/react-flash",
   "version": "1.0.0",
   "description": "A self destructing react flash component",
   "main": "./dist/index.js",
@@ -9,13 +9,17 @@
     "url": "https://github.com/rmiles19/react-flash"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:dev": "NODE_ENV=development webpack",
+    "build:prod": "NODE_ENV=production webpack -p",
+    "prepublish": "npm run build:prod"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rachel Miles",
   "license": "MIT",
-  "dependencies": {
-    "npm": "^5.8.0"
+  "peerDependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "styled-components": "^3.2.6"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
